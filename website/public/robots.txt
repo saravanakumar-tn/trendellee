@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /css/
+Disallow: /assets/
+
+Sitemap: https://trendellee.com/sitemap.xml
