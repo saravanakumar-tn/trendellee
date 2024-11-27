@@ -1,4 +1,5 @@
 import fs from "fs";
+import arrayShuffle from "array-shuffle";
 
 import Handlebars from "handlebars";
 
@@ -20,6 +21,7 @@ const createHTMLFile = (htmlContent) => {
 
 fs.readFile("../website/raw_data/index.json", "utf8", (err, data) => {
   data = JSON.parse(data);
+  data.articles = arrayShuffle(data.articles).slice(0, 10);
   const pageHTMLContent = renderHTML(data);
   createHTMLFile(pageHTMLContent);
 });

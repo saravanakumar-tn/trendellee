@@ -5,13 +5,16 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node --no-warnings index.js",
+    "pages": "node --no-warnings index.js",
+    "home": "node home.js",
+    "sitemap": "node sitemap.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "sarvanakumar-tn",
   "license": "ISC",
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
+    "array-shuffle": "^3.0.0",
     "cheerio": "^1.0.0",
     "dateformat": "^5.0.3",
     "dotenv": "^16.4.5",

@@ -50,6 +50,31 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://trendellee.com/lucky-bhaskar</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/salman-khan</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/alexis-mac-allister</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/xiaomi-redmi-note-14</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/samsung-galaxy-s25-ultra</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://trendellee.com/</loc>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
