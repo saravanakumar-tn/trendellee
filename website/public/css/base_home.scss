@@ -1,0 +1,35 @@
+@import "./common";
+
+main {
+    width: 80%;
+    margin: auto;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .card_article {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        border-bottom: solid 1px #e4e4e4;
+        padding-bottom: 20px;
+        cursor: pointer;
+        padding: 8px 16px 20px 16px;
+        border-radius: 16px;
+
+        &:hover {
+            background: #f4f4f4;
+        }
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 26px;
+        margin: 0;
+    }
+}

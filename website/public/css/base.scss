@@ -1,0 +1,21 @@
+@import "./common";
+
+main {
+  max-width: 680px;
+  margin: auto;
+  padding: 20px 32px;
+
+  .date_and_info {
+    color: #6b6b6b;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: solid 1px #ececec;
+    padding-bottom: 12px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
