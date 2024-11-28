@@ -20,13 +20,18 @@
     <link rel="canonical" href="https://trendellee.com" />
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXBW9GLGZJ"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXBW9GLGZJ"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-XXBW9GLGZJ');
+      gtag("config", "G-XXBW9GLGZJ");
     </script>
 
     <!-- Open Graph (OG) Tags for Social Media -->
@@ -72,13 +77,57 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Website",
+        "@type": "Blog",
+        "@id": "https://trendellee.com",
+        "mainEntityOfPage": "https://trendellee.com",
         "url": "https://trendellee.com",
         "name": "Trendellee",
         "description": "Trending articles on business and finance, beauty and fashion, games, health, hobbies, jobs and education, law and government, politics, shopping, technology",
-        "author": {
-          "@type": "Person",
-          "name": "Trendellee"
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://trendellee.com",
+          "name": "Trendellee",
+          "url": "https://trendellee.com",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://trendellee.com/assets/favicon.ico",
+            "url": "https://trendellee.com/assets/favicon.ico",
+            "width": "48",
+            "height": "48"
+          },
+          "blogPost": [
+            {{#each articles}}
+              {
+                "@type": "BlogPosting",
+                "@id": "https://dataliberate.com/2019/05/14/library-metadata-evolution-final-mile/#BlogPosting",
+                "mainEntityOfPage": "https://trendellee.com/{{article.slug}}",
+                "headline": "{{article.title}}",
+                "name": "{{article.title}}",
+                "description": "{{article.short_description}}",
+                "datePublished": "{{article.date}}",
+                "author": {
+                  "@type": "Organization",
+                  "@id": "https://trendellee.com",
+                  "name": "Trendellee",
+                  "url": "https://trendellee.com",
+                  "image": {
+                    "@type": "ImageObject",
+                    "@id": "https://trendellee.com/assets/favicon.ico",
+                    "url": "https://trendellee.com/assets/favicon.ico",
+                    "width": "48",
+                    "height": "48"
+                  }
+                },
+                "image": {
+                  "@type": "ImageObject",
+                  "@id": "{{article.image.webformatURL}}",
+                  "url": "{{article.image.webformatURL}}"
+                },
+                "url": "https://trendellee.com/{{article.slug}}",
+                "keywords": "{{article.keywords_list}}",
+              }
+            {{/each}}
+          ]
         }
       }
     </script>
@@ -93,9 +142,15 @@
     <!-- Main Content Section -->
     <main>
       {{#each articles }}
-      <div class="card_article" onclick="window.open(`/{{article.slug}}`)">
-        <h2>{{article.title}}</h2>
-        <p>{{article.short_description}}</p>
+      <div
+        class="card_article"
+        onclick="window.open(`/{{article.date_slug}}/{{article.slug}}`)"
+      >
+        <img src="{{article.image.previewURL}}" alt="{{article.image.tags}}" />
+        <div>
+          <h2>{{article.title}}</h2>
+          <p>{{article.short_description}}</p>
+        </div>
       </div>
       {{/each}}
     </main>

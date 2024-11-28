@@ -2,7 +2,10 @@ import fs from "fs";
 import dateFormat from "dateformat";
 import arrayShuffle from "array-shuffle";
 
+import open from "open";
 import Handlebars from "handlebars";
+
+const now = new Date();
 
 const renderHTML = (data) => {
   const source = fs
@@ -17,16 +20,17 @@ const createHTMLFile = (htmlContent) => {
   const filePath = `../website/public/index.html`;
   fs.writeFile(filePath, htmlContent, (err, data) => {
     console.log("## Built home page !");
+    open(filePath);
   });
 };
 
-fs.readFile("../website/raw_data/index.json", "utf8", (err, data) => {
-  data = JSON.parse(data);
-  const today = dateFormat(new Date(), "mmm d, yyyy");
-  data.articles = data.articles.filter((a) => {
-    return a.article.date === today;
-  });
-  data.articles = arrayShuffle(data.articles);
-  const pageHTMLContent = renderHTML(data);
-  createHTMLFile(pageHTMLContent);
-});
+fs.readFile(
+  `../website/raw_data/${dateFormat(now, "m-d-yy")}/index.json`,
+  "utf8",
+  (err, data) => {
+    data = JSON.parse(data);
+    data.articles = arrayShuffle(data.articles);
+    const pageHTMLContent = renderHTML(data);
+    createHTMLFile(pageHTMLContent);
+  }
+);

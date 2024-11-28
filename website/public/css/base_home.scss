@@ -1,35 +1,51 @@
 @import "./common";
 
+body {
+  background-image: url("../assets/site_background.webp");
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../assets/site_background.webp");
+}
+
 main {
-    width: 80%;
-    margin: auto;
-    padding: 24px 0;
+  width: 80%;
+  margin: auto;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .card_article {
     display: flex;
-    flex-direction: column;
-    gap: 4px;
+    flex-direction: row;
+    gap: 24px;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 16px;
+    background: #f4f4f4;
+    width: 100%;
+    border: solid 1px transparent;
 
-    .card_article {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        border-bottom: solid 1px #e4e4e4;
-        padding-bottom: 20px;
-        cursor: pointer;
-        padding: 8px 16px 20px 16px;
-        border-radius: 16px;
-
-        &:hover {
-            background: #f4f4f4;
-        }
+    &:hover {
+        border: solid 1px #c1c1c1;
     }
 
-    h2 {
-        margin-bottom: 0;
+    img {
+      border-radius: 10px 0 0 10px;
     }
+  }
 
-    p {
-        font-size: 18px;
-        line-height: 26px;
-        margin: 0;
-    }
+  h2 {
+    margin: 0;
+    margin-bottom: 6px;
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 22px;
+    margin: 0;
+  }
 }

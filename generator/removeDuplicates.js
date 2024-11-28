@@ -1,6 +1,6 @@
 import fs from "fs";
 
-fs.readFile("../website/raw_data/index.json", "utf8", (err, data) => {
+fs.readFile("../website/raw_data/11-28-24/index.json", "utf8", (err, data) => {
   data = JSON.parse(data);
   const filtered = [];
   data.articles.forEach((a) => {
@@ -9,7 +9,7 @@ fs.readFile("../website/raw_data/index.json", "utf8", (err, data) => {
     }
   });
   fs.writeFile(
-    "../website/raw_data/index.json",
+    "../website/raw_data/11-28-24/index.json",
     JSON.stringify({ articles: filtered }),
     (err, data) => {
       console.log("## Done !");

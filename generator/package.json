@@ -15,10 +15,14 @@
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
     "array-shuffle": "^3.0.0",
+    "axios": "^1.7.8",
     "cheerio": "^1.0.0",
+    "csv-parser": "^3.0.0",
     "dateformat": "^5.0.3",
     "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0",
     "handlebars": "^4.7.8",
+    "open": "^10.1.0",
     "sitemap": "^8.0.0",
     "stream": "^0.0.3"
   }
