@@ -1,4 +1,5 @@
 import fs from "fs";
+import dateFormat from "dateformat";
 import arrayShuffle from "array-shuffle";
 
 import Handlebars from "handlebars";
@@ -21,7 +22,11 @@ const createHTMLFile = (htmlContent) => {
 
 fs.readFile("../website/raw_data/index.json", "utf8", (err, data) => {
   data = JSON.parse(data);
-  data.articles = arrayShuffle(data.articles).slice(0, 10);
+  const today = dateFormat(new Date(), "mmm d, yyyy");
+  data.articles = data.articles.filter((a) => {
+    return a.article.date === today;
+  });
+  data.articles = arrayShuffle(data.articles);
   const pageHTMLContent = renderHTML(data);
   createHTMLFile(pageHTMLContent);
 });
