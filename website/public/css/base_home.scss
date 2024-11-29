@@ -16,6 +16,9 @@ main {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  @media (max-width: 800px) {
+    width: 90%;
+  }
 
   .card_article {
     display: flex;
@@ -27,6 +30,10 @@ main {
     background: #f4f4f4;
     width: 100%;
     border: solid 1px transparent;
+    box-sizing: border-box;
+    @media (max-width: 520px) {
+      flex-direction: column;
+    }
 
     &:hover {
         border: solid 1px #c1c1c1;
@@ -34,6 +41,15 @@ main {
 
     img {
       border-radius: 10px 0 0 10px;
+      @media (max-width: 520px) {
+        border-radius: 10px;
+      }
+    }
+
+    p {
+      @media (max-width: 520px) {
+        display: none;
+      }
     }
   }
 
