@@ -125,7 +125,7 @@
                 },
                 "url": "https://trendellee.com/{{article.slug}}",
                 "keywords": "{{article.keywords_list}}",
-              }
+              }{{#unless @last}},{{/unless}}
             {{/each}}
           ]
         }
