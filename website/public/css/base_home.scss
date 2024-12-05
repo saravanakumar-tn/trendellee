@@ -16,27 +16,70 @@ main {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  max-width: 1200px;
   @media (max-width: 800px) {
     width: 90%;
+  }
+
+  section {
+    margin-bottom: 16px;
+
+    h2 {
+      display: flex;
+      
+      .trending_in {
+        @media (max-width: 400px) {
+          display: none;
+        }
+      }
+
+      .region {
+        display: flex;
+        margin-left: 6px;
+        gap: 6px;
+        background: #eeeeee;
+        padding: 0 8px;
+        border-radius: 4px;
+        font-size: 88%;
+        align-items: center;
+      }
+    }
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  .cards_container {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 16px;
   }
 
   .card_article {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 24px;
     cursor: pointer;
     padding: 12px;
     border-radius: 16px;
-    background: #f4f4f4;
-    width: 100%;
+    width: 33%;
     border: solid 1px transparent;
     box-sizing: border-box;
+    @media (max-width: 1100px) {
+      width: calc(50% - 12px);
+    }
+    @media (max-width: 1100px) {
+      width: 100%;
+    }
     @media (max-width: 520px) {
       flex-direction: column;
     }
 
     &:hover {
-        border: solid 1px #c1c1c1;
+      background: #e6e6ff68;
     }
 
     img {
@@ -51,17 +94,24 @@ main {
         display: none;
       }
     }
-  }
 
-  h2 {
-    margin: 0;
-    margin-bottom: 6px;
-    font-size: 18px;
-  }
+    h3 {
+      margin: 0;
+      margin-bottom: 6px;
+    }
 
-  p {
-    font-size: 15px;
-    line-height: 22px;
-    margin: 0;
+    p {
+      font-size: 15px;
+      line-height: 22px;
+      margin: 0;
+      margin-bottom: 8px;
+    }
+
+    small {
+      padding: 4px 8px;
+      border-radius: 8px;
+      background: #eeeeee;
+      font-size: 12px;
+    }
   }
 }
