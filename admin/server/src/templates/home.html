@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO Meta Tags -->
+    <title>Trendellee</title>
+    <meta
+      name="description"
+      content="Trending articles on business and finance, beauty and fashion, games, health, hobbies, jobs and education, law and government, politics, shopping, technology"
+    />
+    <meta
+      name="keywords"
+      content="business and finance, beauty and fashion, games, health, hobbies, jobs and education, law and government, politics, shopping, technology"
+    />
+    <meta name="author" content="Trendellee" />
+    <link rel="canonical" href="https://trendellee.com" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXBW9GLGZJ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-XXBW9GLGZJ");
+    </script>
+
+    <!-- Open Graph (OG) Tags for Social Media -->
+    <meta property="og:title" content="Trendellee" />
+    <meta
+      property="og:description"
+      content="Trending articles on business and finance, beauty and fashion, games, health, hobbies, jobs and education, law and government, politics, shopping, technology"
+    />
+    <meta property="og:url" content="https://trendellee.com" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Trendellee" />
+
+    <!-- Twitter Card Data -->
+    {{!--
+    <meta name="twitter:card" content="summary_large_image" />
+    --}}
+    <meta name="twitter:title" content="Trendellee" />
+    <meta
+      name="twitter:description"
+      content="Trending articles on business and finance, beauty and fashion, games, health, hobbies, jobs and education, law and government, politics, shopping, technology"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/base_home.css" />
+
+    <!-- Robots Meta Tag -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "@id": "https://trendellee.com",
+        "mainEntityOfPage": "https://trendellee.com",
+        "url": "https://trendellee.com",
+        "name": "Trendellee",
+        "description": "Trending articles on business and finance, beauty and fashion, games, health, hobbies, jobs and education, law and government, politics, shopping, technology",
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://trendellee.com",
+          "name": "Trendellee",
+          "url": "https://trendellee.com",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://trendellee.com/assets/favicon.ico",
+            "url": "https://trendellee.com/assets/favicon.ico",
+            "width": "48",
+            "height": "48"
+          },
+          "blogPost": [
+            {{#each articles_seo}}
+              {
+                "@type": "BlogPosting",
+                "@id": "https://trendellee.com{{path}}",
+                "mainEntityOfPage": "https://trendellee.com{{path}}",
+                "headline": "{{title}}",
+                "name": "{{title}}",
+                "description": "{{short_description}}",
+                "datePublished": "{{date}}",
+                "author": {
+                  "@type": "Organization",
+                  "@id": "https://trendellee.com",
+                  "name": "Trendellee",
+                  "url": "https://trendellee.com",
+                  "image": {
+                    "@type": "ImageObject",
+                    "@id": "https://trendellee.com/assets/favicon.ico",
+                    "url": "https://trendellee.com/assets/favicon.ico",
+                    "width": "48",
+                    "height": "48"
+                  }
+                },
+                "image": {
+                  "@type": "ImageObject",
+                  "@id": "{{image.webformatURL}}",
+                  "url": "{{image.webformatURL}}"
+                },
+                "url": "https://trendellee.com{{path}}",
+                "keywords": "{{keywords_list}}"
+              }{{#unless @last}},{{/unless}}
+            {{/each}}
+          ]
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="logo">Trendellee</div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        {{#each by_regions }}
+            <section>
+                <h2><span class="trending_in">Trending in</span> <span class="region"><img width="24" src="https://flagsapi.com/{{lookup ../region_map @key}}/flat/64.png">{{@key}}</span></h2>
+                <div class="cards_container">
+                    {{#each this}}
+                        <div class="card_article" onclick="window.open(`{{this.path}}.html`)">
+                            <div>
+                                <h3>{{this.title}}</h3>
+                                <p>{{this.short_description}}</p>
+                                <small>{{this.trend.category.name}}</small>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </section>
+        {{/each}}
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Trendellee. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

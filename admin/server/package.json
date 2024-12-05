@@ -1,0 +1,29 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "description": "admin panel for trendellee",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "saravanakumar-tn",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "dateformat": "^5.0.3",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.1.0",
+    "fs-extra": "^11.2.0",
+    "handlebars": "^4.7.8",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.8.3",
+    "sitemap": "^8.0.0",
+    "stream": "^0.0.3",
+    "uuid": "^11.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
