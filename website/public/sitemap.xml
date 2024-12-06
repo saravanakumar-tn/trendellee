@@ -120,6 +120,21 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://trendellee.com/jp/law-and-government/fujiyoshida-city-robbery-case-shakes-japan</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/jp/law-and-government/-a-legal-storm-brewing-in-japan</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/jp/entertainment/sns</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://trendellee.com</loc>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>

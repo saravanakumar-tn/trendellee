@@ -12,6 +12,7 @@ import _ from "lodash";
 import fs from "fs-extra";
 import Handlebars from "handlebars";
 import * as path from "path";
+import dateFormat from "dateformat";
 import Region from "./models/Region.js";
 
 import { SitemapStream, streamToPromise } from "sitemap";
@@ -40,7 +41,9 @@ app.get("/api/homepage", async (request, reply) => {
     regions.forEach((r) => {
       regionMap[r.name] = r.code.toUpperCase();
     });
-    let raisedPages = await Page.find({ status: "raised" })
+    let raisedPages = await Page.find({
+      date: dateFormat(new Date(), "mmm d, yyyy"),
+    })
       .populate({
         path: "trend",
         populate: [
