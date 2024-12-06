@@ -90,6 +90,36 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://trendellee.com/us/climate/tsunami-warnings-a-growing-concern-in-the-us</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/us/law-and-government/deny-defend-depose--legal-terms-in-the-spotlight-after-recent-nyc-ceo-shooting</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/us/food-and-drinks/mcdonalds-snack-wrap-a-trending-treat</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/us/law-and-government/glenn-litton-the-butte-county-kindergarten-shooting-and-its-aftermath</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/us/technology/ios--whats-new-and-trending-in-the-us</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/us/business-and-finance/hawk-tuah-girl-crypto-coin-the-hailey-welch-connection</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://trendellee.com</loc>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>

@@ -92,7 +92,7 @@ app.get("/api/homepage", async (request, reply) => {
 
 app.get("/api/sitemap", async (request, reply) => {
   try {
-    const raisedPages = await Page.find({ status: "raised" });
+    const raisedPages = await Page.find({});
     const links = raisedPages.map((p) => {
       return { url: p.path, changefreq: "monthly", priority: 0.5 };
     });
