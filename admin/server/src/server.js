@@ -116,6 +116,15 @@ app.get("/api/sitemap", async (request, reply) => {
   }
 });
 
+app.get("/api/mark-as-published", async (request, reply) => {
+  try {
+    await Page.updateMany({}, { status: "published" });
+    reply.code(200).send({ message: "Pages status updated" });
+  } catch (error) {
+    reply.code(500).send(e);
+  }
+});
+
 /**
  * Run the server!
  */
