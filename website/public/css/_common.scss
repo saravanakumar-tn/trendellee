@@ -14,8 +14,8 @@ header {
     top: 0;
     background: #fff;
     box-shadow: 0 1px 6px 0px rgb(32 33 36 / 10%);
-    @media (max-width: 400px) {
-        padding: 0 20px;
+    @media (max-width: 800px) {
+        padding: 0 calc(100vw - 95vw);
     }
 
     .logo {
