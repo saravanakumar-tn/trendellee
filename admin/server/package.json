@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
+    "axios": "^1.7.9",
     "dateformat": "^5.0.3",
     "dotenv": "^16.4.7",
     "fastify": "^5.1.0",

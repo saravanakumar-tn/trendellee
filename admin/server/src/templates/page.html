@@ -31,8 +31,8 @@
     <!-- Open Graph (OG) Tags for Social Media -->
     <meta property="og:title" content="{{article.title}}" />
     <meta property="og:description" content="{{article.short_description}}" />
-    {{#if article.image}}
-    <meta property="og:image" content="{{article.image.previewURL}}" />
+    {{#if article.is_image}}
+    <meta property="og:image" content="https://trendellee.com/assets/images{{article.path}}.jpg" />
     {{/if}}
     <meta property="og:url" content="https://trendellee.com{{article.path}}" />
     <meta property="og:type" content="article" />
@@ -44,8 +44,8 @@
     --}}
     <meta name="twitter:title" content="{{article.title}}" />
     <meta name="twitter:description" content="{{article.short_description}}" />
-    {{#if article.image}}
-    <meta name="twitter:image" content="{{article.image.previewURL}}" />
+    {{#if article.is_image}}
+    <meta name="twitter:image" content="https://trendellee.com/assets/images{{article.path}}.jpg" />
     {{/if}}
 
     <!-- Favicon -->
@@ -104,8 +104,8 @@
         },
         "image": {
           "@type": "ImageObject",
-          "@id": "{{article.image.webformatURL}}",
-          "url": "{{article.image.webformatURL}}"
+          "@id": "https://trendellee.com/assets/images{{article.path}}.jpg",
+          "url": "https://trendellee.com/assets/images{{article.path}}.jpg"
         },
         "url": "https://trendellee.com{{article.path}}",
         "isPartOf": {
@@ -140,11 +140,11 @@
         </svg>
         <small>{{article.reading_time}} read</small>
       </div>
-      {{/if}} {{#if article.image}}
+      {{/if}} {{#if article.is_image}}
       <div class="image">
         <img
-          src="{{article.image.webformatURL}}"
-          alt="{{article.image.tags}}"
+          src="/assets/images{{article.path}}.jpg"
+          alt="{{article.title}}"
         />
       </div>
       {{/if}} {{article.body}}

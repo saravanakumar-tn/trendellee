@@ -5,7 +5,6 @@ import {
   TextField,
   EditButton,
   DeleteButton,
-  ReferenceField,
 } from "react-admin";
 
 const PageList = (props) => {
@@ -13,7 +12,6 @@ const PageList = (props) => {
     <List {...props}>
       <Datagrid>
         <TextField source="title" />
-        <ReferenceField source="trend" target="id" reference="trends" />
         <EditButton label="Edit" basePath="/pages" />
         <DeleteButton label="Delete" basePath="/pages" />
       </Datagrid>

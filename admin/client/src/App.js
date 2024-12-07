@@ -1,5 +1,6 @@
 import React from "react";
-import { Admin, Resource } from "react-admin";
+import { Admin, Resource, CustomRoutes } from "react-admin";
+import { Route } from "react-router-dom";
 import dataProvider from "./dataProvider.js";
 
 import CategoryList from "./components/category/CategoryList.js";
@@ -17,6 +18,7 @@ import TrendEdit from "./components/trend/TrendEdit.js";
 import PageList from "./components/page/PageList.js";
 import PageCreate from "./components/page/PageCreate.js";
 import PageEdit from "./components/page/PageEdit.js";
+import SelectImage from "./components/page/SelectImage.js";
 
 const App = () => {
   return (
@@ -45,6 +47,9 @@ const App = () => {
         edit={PageEdit}
         create={PageCreate}
       />
+      <CustomRoutes>
+        <Route path="/select-image/:id" element={<SelectImage />} />
+      </CustomRoutes>
     </Admin>
   );
 };

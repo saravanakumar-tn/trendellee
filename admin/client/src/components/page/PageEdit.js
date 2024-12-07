@@ -5,12 +5,14 @@ import {
   TextInput,
   SelectInput,
   ReferenceInput,
+  UrlField,
 } from "react-admin";
 
 const PageEdit = (props) => {
   return (
     <Edit {...props}>
       <SimpleForm>
+        <UrlField source="image" label="Image" content="Set Image" />
         <TextInput source="title" required />
         <TextInput source="short_description" required />
         <TextInput source="reading_time" required />

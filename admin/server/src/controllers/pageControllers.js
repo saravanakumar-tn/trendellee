@@ -6,6 +6,8 @@ const pageControllers = {
     try {
       const page = request.body;
       const newPage = await Page.create(page);
+      newPage.image = `/#/select-image/${newPage._id}`;
+      await newPage.save();
       const trendUpdate = await Trend.findByIdAndUpdate(page.trend, {
         page: newPage._id,
       });

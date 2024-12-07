@@ -22,6 +22,9 @@ const pageSchema = new Schema({
     type: String,
     required: true,
   },
+  body: {
+    type: String,
+  },
   html: {
     type: String,
     required: true,
@@ -37,6 +40,9 @@ const pageSchema = new Schema({
   },
   image: {
     type: String,
+  },
+  is_image: {
+    type: Boolean,
   },
   notes: {
     type: String,
