@@ -141,25 +141,20 @@
 
     <!-- Main Content Section -->
     <main>
-        {{#each by_regions }}
-            <section>
-                {{!-- <h2><span class="trending_in">Trending in</span> <span class="region"><img width="24" src="https://flagsapi.com/{{lookup ../region_map @key}}/flat/64.png">{{@key}}</span></h2> --}}
-                <div class="cards_container">
-                    {{#each this}}
-                        <div class="card_article" onclick="window.open(`{{this.path}}.html`)">
-                            <div class="card_image">
-                              <img src="/assets/images{{this.path}}.jpg" alt="{{this.title}}" />
-                            </div>
-                            <div class="card_content">
-                                <h3>{{this.title}}</h3>
-                                <p>{{this.short_description}}</p>
-                                <small>{{this.trend.category.name}}</small>
-                            </div>
-                        </div>
-                    {{/each}}
-                </div>
-            </section>
-        {{/each}}
+        <section class="cards_container">
+          {{#each articles }}
+              <div class="card_article" onclick="window.open(`{{this.path}}.html`)">
+                  <div class="card_image">
+                    <img src="/assets/images{{this.path}}.jpg" alt="{{this.title}}" />
+                  </div>
+                  <div class="card_content">
+                      <h3>{{this.title}}</h3>
+                      <p>{{this.short_description}}</p>
+                      <small>{{this.trend.category.name}}</small>
+                  </div>
+              </div>
+          {{/each}}
+        </section>
     </main>
 
     <!-- Footer Section -->

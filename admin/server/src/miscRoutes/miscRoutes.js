@@ -36,7 +36,6 @@ const miscRoutes = (app) => {
         article.keywords_list = keywords;
         return article;
       });
-      const byRegion = _.groupBy(raisedPages, "trend.region.name");
 
       //render html
       let template = fs
@@ -46,7 +45,7 @@ const miscRoutes = (app) => {
         .toString();
       template = Handlebars.compile(template, { noEscape: true });
       const html = template({
-        by_regions: byRegion,
+        articles: raisedPages,
         articles_seo: raisedPages.slice(0, 3),
         region_map: regionMap,
       });
@@ -63,7 +62,7 @@ const miscRoutes = (app) => {
       await fs.writeFile(filePath, html);
 
       reply.code(200).send({
-        by_regions: byRegion,
+        articles: articles,
         articles_seo: raisedPages.slice(0, 3),
         region_map: regionMap,
       });
