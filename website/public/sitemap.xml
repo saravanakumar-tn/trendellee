@@ -265,6 +265,16 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://trendellee.com/sg/politics/yoon-suk-yeol-martial-law-whispers-and-singapores-interest</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/ca/politics/ghana-election--a-canadian-perspective</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://trendellee.com</loc>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
