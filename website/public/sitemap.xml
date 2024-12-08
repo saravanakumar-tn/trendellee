@@ -220,6 +220,51 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://trendellee.com/fr/sports/french-f-frenzy-lando-norris-abu-dhabi-and-the-constructor-standings</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/us/business-and-finance/cardano-vs-xrp-which-crypto-is-heating-up-the-us-market</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/za/climate/south-africa-sizzles-coping-with-the-heat-wave</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/us/law-and-government/laphonza-butler-a-rising-star-in-us-politics</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/gb/law-and-government/is-the-uk-state-pension-a-ponzi-scheme-unpacking-the-trending-conspiracy</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/bh/politics/bashar-al-assads-grip-on-syria-a-complex-issue-trending-in-bahrain</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/fr/business-and-finance/sncf-strikes-on-december-th-disruption-and-financial-fallout</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/fr/technology/cyberattacks-targeting-french-banks-a-growing-concern</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/us/beauty-and-fashion/bath--body-works-candle-day-your-ultimate-guide</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://trendellee.com</loc>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
