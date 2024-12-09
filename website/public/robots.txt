@@ -1,6 +1,3 @@
-User-Agent: *
-Disallow: /css/
-Disallow: /assets/
-Allow: /assets/favicon.ico
-
+User-agent: *
+Disallow:
 Sitemap: https://trendellee.com/sitemap.xml
