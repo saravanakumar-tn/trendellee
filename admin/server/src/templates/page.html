@@ -102,11 +102,13 @@
             "height": "48"
           }
         },
-        "image": {
-          "@type": "ImageObject",
-          "@id": "https://trendellee.com/assets/images{{article.path}}.jpg",
-          "url": "https://trendellee.com/assets/images{{article.path}}.jpg"
-        },
+        {{#if article.is_image}}
+          "image": {
+            "@type": "ImageObject",
+            "@id": "https://trendellee.com/assets/images{{article.path}}.jpg",
+            "url": "https://trendellee.com/assets/images{{article.path}}.jpg"
+          },
+        {{/if}}
         "url": "https://trendellee.com{{article.path}}",
         "isPartOf": {
           "@type": "Blog",
@@ -118,7 +120,7 @@
             "name": "Trendellee"
           }
         },
-        "keywords": "{{article.keywords_list}}",
+        "keywords": "{{article.keywords_list}}"
       }
     </script>
   </head>

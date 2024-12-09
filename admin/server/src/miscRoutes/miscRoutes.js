@@ -9,6 +9,7 @@ import axios from "axios";
 
 import { SitemapStream, streamToPromise } from "sitemap";
 import { Readable } from "stream";
+import { parse } from "node-html-parser";
 
 const miscRoutes = (app) => {
   app.get("/api/homepage", async (request, reply) => {
@@ -178,7 +179,6 @@ const miscRoutes = (app) => {
       const id = request.params.id;
       const page = await Page.findById(id);
       const article = page.toObject();
-      console.log(article);
       article.keywords_list = article.keywords.split(", ");
       const filePath = path.join(
         import.meta.dirname,
@@ -203,6 +203,41 @@ const miscRoutes = (app) => {
       await page.save();
 
       reply.code(200).send({ message: "Page updated with image" });
+    } catch (e) {
+      reply.code(500).send(e);
+    }
+  });
+
+  app.get("/api/render-html", async (request, reply) => {
+    try {
+      const pages = await Page.find({});
+      pages.forEach(async (page, idx) => {
+        const article = page.toObject();
+        article.keywords_list = article.keywords.split(", ");
+        const filePath = path.join(
+          import.meta.dirname,
+          "..",
+          "..",
+          "..",
+          "..",
+          "website",
+          "public",
+          `${page.path}.html`
+        );
+        await fs.ensureFile(filePath);
+
+        let template = fs
+          .readFileSync(
+            path.join(import.meta.dirname, "..", "templates", "page.html")
+          )
+          .toString();
+        template = Handlebars.compile(template, { noEscape: true });
+        page.html = template({ article: article });
+        await fs.writeFile(filePath, page.html);
+        await page.save();
+      });
+
+      reply.code(200).send({ message: "Pages updated with image" });
     } catch (e) {
       reply.code(500).send(e);
     }
