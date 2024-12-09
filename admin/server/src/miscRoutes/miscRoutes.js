@@ -20,7 +20,7 @@ const miscRoutes = (app) => {
         regionMap[r.name] = r.code.toUpperCase();
       });
       let raisedPages = await Page.find({
-        date: dateFormat(new Date(), "mmm d, yyyy"),
+        status: "raised",
       })
         .populate({
           path: "trend",
@@ -32,8 +32,16 @@ const miscRoutes = (app) => {
         .lean()
         .exec();
       raisedPages = raisedPages.map((a) => {
-        const { title, short_description, path, date, keywords, trend } = a;
-        let article = { title, short_description, path, date, trend };
+        const {
+          title,
+          short_description,
+          path,
+          date,
+          keywords,
+          trend,
+          is_image,
+        } = a;
+        let article = { title, short_description, path, date, trend, is_image };
         article.keywords_list = keywords;
         return article;
       });
@@ -63,7 +71,7 @@ const miscRoutes = (app) => {
       await fs.writeFile(filePath, html);
 
       reply.code(200).send({
-        articles: articles,
+        articles: raisedPages,
         articles_seo: raisedPages.slice(0, 3),
         region_map: regionMap,
       });

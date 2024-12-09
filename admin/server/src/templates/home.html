@@ -118,11 +118,13 @@
                     "height": "48"
                   }
                 },
+                {{#if is_image }}
                 "image": {
                   "@type": "ImageObject",
-                  "@id": "{{image.webformatURL}}",
-                  "url": "{{image.webformatURL}}"
+                  "@id": "https://trendellee.com{{path}}.jpg",
+                  "url": "https://trendellee.com{{path}}.jpg"
                 },
+                {{/if}}
                 "url": "https://trendellee.com{{path}}",
                 "keywords": "{{keywords_list}}"
               }{{#unless @last}},{{/unless}}

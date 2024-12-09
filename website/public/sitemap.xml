@@ -275,6 +275,31 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://trendellee.com/in/entertainment/netflixs-mary-a-modern-spin-on-a-biblical-tale-taking-india-by-storm</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/in/jobs-and-education/yes-madam-the-rise-fall-and-controversial-layoffs-of-indias-cleaning-service-startup</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/in/business-and-finance/riding-the-rollercoaster-multibagger-penny-stocks-in-india</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/us/business-and-finance/chinas-anti-monopoly-law-a-us-perspective-focusing-on-nvidia-nvda</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/ru/law-and-government/hinshteins-potential-governorship-of-kursk-oblast-a-trending-topic-in-russia</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://trendellee.com</loc>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
