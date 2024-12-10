@@ -35,7 +35,7 @@ const contentGenerationControllers = {
         .split(" ")
         .join("-")
         .toLowerCase()
-        .replace(/[^a-z-]/g, "")}`;
+        .replace(/[^a-z0-9-]/g, "")}`;
       article.keywords_list = article.keywords.split(", ");
 
       //#TODO - fetch image
@@ -70,7 +70,7 @@ const contentGenerationControllers = {
         .split(" ")
         .join("-")
         .toLowerCase()
-        .replace(/[^a-z-]/g, "")}.html`;
+        .replace(/[^a-z0-9-]/g, "")}.html`;
       await fs.writeFile(filePath, article.html);
       reply.code(201).send(article);
     } catch (e) {

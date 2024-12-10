@@ -300,6 +300,21 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://trendellee.com/us/science/google-stock-soars--is-quantum-computing-the-secret-sauce</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/us/technology/playstation-wrap-up-2024-a-year-of-surprises-and-solid-hits</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://trendellee.com/us/travel-and-transportation/is-amazon-selling-25-flights-unpacking-the-hype</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://trendellee.com</loc>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>

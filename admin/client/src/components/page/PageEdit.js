@@ -17,7 +17,7 @@ const PageEdit = (props) => {
         <TextInput source="short_description" required />
         <TextInput source="reading_time" required />
         <TextInput source="notes" multiline disabled />
-        <TextInput source="html" required multiline />
+        <TextInput source="body" required multiline />
         <ReferenceInput source="trend" reference="trends" required>
           <SelectInput disabled required />
         </ReferenceInput>

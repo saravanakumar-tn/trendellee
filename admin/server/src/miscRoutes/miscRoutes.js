@@ -250,6 +250,23 @@ const miscRoutes = (app) => {
       reply.code(500).send(e);
     }
   });
+
+  app.get("/api/index-now", async (request, reply) => {
+    try {
+      const pages = await Page.find({ status: "raised" });
+      const urls = pages.map((page) => {
+        return `https://trendellee.com${page.path}`;
+      });
+      const res = await axios.post(`https://api.indexnow.org/indexnow`, {
+        host: "https://trendellee.com",
+        key: "39790ee5acca410b8a4a61c847cc5084",
+        urlList: urls,
+      });
+      reply.code(200).send(urls);
+    } catch (e) {
+      reply.code(500).send(e);
+    }
+  });
 };
 
 export default miscRoutes;
